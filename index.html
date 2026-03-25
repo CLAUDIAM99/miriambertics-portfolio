@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Miriam Bertin — Graphic Designer & Art Direction. Portfolio progetti: brand identity, UX/UI, ADV, 3D." />
-  <title>Miriam Bertin | Graphic Designer & Art Director</title>
+  <meta name="description" content="Miriam Bertin — Graphic Designer &amp; Art Direction. Portfolio: brand identity, UX/UI, ADV, 3D. Ispirato al lavoro su carta e digitale." />
+  <title>Miriam Bertin | Graphic Designer &amp; Art Director</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="images/logo-mark.png" type="image/png" />
 </head>
 <body>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Miriam Bertin — home">
-      <img src="images/logo-mark.png" width="48" height="48" alt="" />
+      <img class="brand__mark" src="images/logo-mark.png" width="44" height="44" alt="" />
       <span class="brand__text">Miriam Bertin</span>
     </a>
     <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-overlay">
@@ -24,10 +24,12 @@
   </header>
 
   <div class="nav-overlay" id="nav-overlay" hidden>
+    <p class="nav-overlay__hint" aria-hidden="true">Chi sono, Progetti, Servizi</p>
     <nav class="nav-overlay__inner" aria-label="Principale">
       <a href="#chi-sono">Chi sono</a>
       <a href="#progetti">Progetti</a>
       <a href="#servizi">Servizi</a>
+      <a href="#processo">Processo</a>
       <a href="#contatti">Parliamone</a>
     </nav>
     <button type="button" class="nav-overlay__close" id="nav-close">Chiudi</button>
@@ -35,17 +37,32 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__logo-wrap">
+        <img class="hero__logo" src="images/logo-mark.png" width="200" height="200" alt="Logo Miriam Bertin — segno monolinea" />
+      </div>
       <p class="hero__eyebrow">Graphic Designer <span class="amp">&amp;</span> Art Director</p>
       <h1 id="hero-title" class="hero__title">
         <span class="hero__line">Miriam</span>
         <span class="hero__line hero__line--accent">Bertin</span>
       </h1>
       <p class="hero__tagline">
-        Progetto identità visive, interfacce e campagne con cura del dettaglio e una forte sensibilità estetica.
+        Progetto identità, interfacce e campagne con immagini che raccontano davvero chi sei.
+        <span class="hero__tagline-aside">Curiosità visiva e un po’ di testa sulle spalle — non sempre nello stesso ordine.</span>
       </p>
       <a class="hero__cta" href="#progetti">Scopri i progetti</a>
-      <div class="hero__logo-mark" aria-hidden="true">
-        <img src="images/logo-mark.png" width="120" height="120" alt="" />
+    </section>
+
+    <section class="ideas-strip" aria-labelledby="ideas-title">
+      <div class="ideas-strip__inner">
+        <div class="ideas-strip__copy">
+          <h2 id="ideas-title" class="ideas-strip__title">Progetto idee</h2>
+          <p class="ideas-strip__lead">
+            E le trasformo in grafica, branding e direzione creativa che ha personalità — chiara, coerente e un filo fuori dagli schemi quando serve.
+          </p>
+        </div>
+        <figure class="ideas-strip__figure">
+          <img src="images/portfolio/page-05.png" alt="" loading="lazy" width="800" height="600" />
+        </figure>
       </div>
     </section>
 
@@ -54,16 +71,13 @@
         <h2 id="about-title" class="section__title">Chi sono</h2>
         <div class="about__grid">
           <p class="about__lead">
-            Laureata in <strong>Graphic Design &amp; Art Direction</strong> (NABA, Milano), trasformo la passione per
-            l’immagine in progetti concreti — dal branding alle campagne pubblicitarie.
+            Mi chiamo <strong>Miriam Bertin</strong>, <strong>Graphic Designer e Art Director</strong>. Tutto quello che vedi qui nasce da esperienze accademiche e da ricerca in ambito estetico, grafico e tecnologico.
           </p>
           <p>
-            Tutto ciò che trovi in questo portfolio nasce da esperienze accademiche e da ricerca in ambito estetico,
-            grafico e tecnologico. Ogni lavoro è un’occasione per mettermi alla prova e imparare nuovi modi di comunicare.
+            Durante il mio percorso ho esplorato diverse forme di espressione visiva, sviluppando sensibilità per il dettaglio e per il modo in cui le immagini comunicano emozioni e raccontano storie. Ogni progetto è un’occasione per mettermi alla prova e imparare nuovi modi di comunicare — dal branding alle campagne pubblicitarie.
           </p>
           <p class="about__note">
-            I marchi e i loghi presenti sono di proprietà dei rispettivi titolari; l’uso è esclusivamente dimostrativo.
-            Progetti personali, accademici e freelance © Miriam Bertin — tutti i diritti riservati.
+            I marchi e i loghi presenti sono di proprietà dei rispettivi titolari; l’uso è esclusivamente dimostrativo. Progetti personali, accademici e freelance © Miriam Bertin — tutti i diritti riservati.
           </p>
         </div>
       </div>
@@ -72,7 +86,7 @@
     <section class="section" id="progetti" aria-labelledby="projects-title">
       <div class="section__inner">
         <h2 id="projects-title" class="section__title">Progetti</h2>
-        <p class="section__intro">Una selezione di lavori — da concept a direzione creativa.</p>
+        <p class="section__intro">Una selezione dei lavori del portfolio — stessi progetti del PDF CV.</p>
         <ul class="project-grid" id="project-grid"></ul>
       </div>
     </section>
@@ -80,6 +94,16 @@
     <section class="section section--dark" id="servizi" aria-labelledby="services-title">
       <div class="section__inner">
         <h2 id="services-title" class="section__title section__title--on-dark">Servizi</h2>
+        <p class="section__intro section__intro--on-dark">
+          Cosa posso fare per te — in poche parole, poi andiamo nel dettaglio.
+        </p>
+        <ul class="service-chips" aria-label="Ambiti di lavoro">
+          <li>Brand identity</li>
+          <li>UX / UI</li>
+          <li>ADV</li>
+          <li>Art direction</li>
+          <li>3D &amp; motion</li>
+        </ul>
         <ul class="service-list">
           <li>
             <h3>Brand identity</h3>
@@ -101,10 +125,29 @@
       </div>
     </section>
 
+    <section class="section section--process" id="processo" aria-labelledby="process-title">
+      <div class="section__inner">
+        <h2 id="process-title" class="section__title">Processo creativo</h2>
+        <p class="section__intro">
+          Dietro ogni progetto c’è un metodo: ascolto, ricerca, bozze e revisioni fino alla consegna — così il risultato è chiaro, tua e pronto all’uso.
+        </p>
+        <ol class="process-list">
+          <li><span class="process-list__n">01</span> <strong>Briefing</strong> — Ascolto obiettivi, vincoli e riferimenti; domande e appunti (e qualche scarabocchio).</li>
+          <li><span class="process-list__n">02</span> <strong>Preventivo</strong> — Proposta suddivisa per voci, trasparente e senza impegno.</li>
+          <li><span class="process-list__n">03</span> <strong>Ricerca</strong> — Reference, competitor, mood e direzione visiva condivisa.</li>
+          <li><span class="process-list__n">04</span> <strong>Bozze</strong> — Idee su carta e digitale; selezione di concept da portare avanti insieme.</li>
+          <li><span class="process-list__n">05</span> <strong>Revisioni</strong> — Affinamento sul concept scelto, allineamento continuo con te.</li>
+          <li><span class="process-list__n">06</span> <strong>Consegna</strong> — File organizzati nei formati concordati; eventuali correzioni incluse.</li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section section--contact" id="contatti" aria-labelledby="contact-title">
       <div class="section__inner section__inner--narrow">
         <h2 id="contact-title" class="section__title">Parliamone</h2>
-        <p class="contact__lead">Se vuoi collaborare o ricevere il PDF completo del portfolio, scrivimi.</p>
+        <p class="contact__lead">
+          Grazie per il tempo dedicato al portfolio. Se ti va di collaborare o ricevere il PDF completo, scrivimi un rigo.
+        </p>
         <ul class="contact__list">
           <li>
             <span class="contact__label">Email</span>
@@ -124,9 +167,29 @@
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <span class="site-footer__name">Miriam Bertin</span>
-      <span class="site-footer__year">© <span id="year"></span></span>
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="images/logo-mark.png" width="56" height="56" alt="" class="site-footer__logo" />
+        <div>
+          <span class="site-footer__name">Miriam Bertin</span>
+          <p class="site-footer__tag">Graphic Designer &amp; Art Director</p>
+        </div>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer sito">
+        <span class="site-footer__nav-label">Sito</span>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#processo">Processo</a>
+        <a href="#contatti">Contattami</a>
+      </nav>
+      <div class="site-footer__social">
+        <span class="site-footer__nav-label">Social</span>
+        <a href="https://instagram.com/miriamberticsdesign" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span id="year"></span> Miriam Bertin</span>
     </div>
   </footer>
 
