@@ -1,0 +1,41 @@
+# Blueprint Render: https://render.com/docs/infrastructure-as-code
+# Repo: https://github.com/CLAUDIAM99/miriambertics-portfolio
+#
+# Setup: Dashboard Render → New + → Blueprint → collega il repository.
+# Dopo il primo deploy del backend, imposta FRONTEND_URL (URL del sito statico .onrender.com)
+# nelle Environment del servizio miriambertics-api per CORS stretto (opzionale).
+
+services:
+  - type: web
+    name: miriambertics-api
+    runtime: node
+    repo: https://github.com/CLAUDIAM99/miriambertics-portfolio.git
+    branch: main
+    region: frankfurt
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: FRONTEND_URL
+        sync: false
+
+  - type: web
+    name: miriambertics-web
+    runtime: static
+    repo: https://github.com/CLAUDIAM99/miriambertics-portfolio.git
+    branch: main
+    region: frankfurt
+    # I piani non si applicano ai siti statici come alle web app; vedi dashboard se chiede opzioni CDN.
+    buildCommand: bash scripts/render-static-build.sh
+    staticPublishPath: ./_site
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
