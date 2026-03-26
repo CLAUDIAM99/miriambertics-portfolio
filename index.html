@@ -8,13 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/logo-mark.png" type="image/png" />
+  <!-- Supporta sia struttura /css/styles.css che styles.css in root -->
+  <link rel="stylesheet" href="css/styles.css" onerror="this.remove()" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Supporta sia images/logo-mark.png che logo-mark.png in root -->
+  <link rel="icon" href="images/logo-mark.png" type="image/png" onerror="this.href='logo-mark.png'" />
 </head>
 <body>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Miriam Bertin — home">
-      <img class="brand__mark" src="images/logo-mark.png" width="44" height="44" alt="" />
+      <img class="brand__mark" src="images/logo-mark.png" width="44" height="44" alt="" onerror="this.src='logo-mark.png'" />
       <span class="brand__text">Miriam Bertin</span>
     </a>
     <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-overlay">
@@ -38,7 +41,7 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__logo-wrap">
-        <img class="hero__logo" src="images/logo-mark.png" width="200" height="200" alt="Logo Miriam Bertin — segno monolinea" />
+        <img class="hero__logo" src="images/logo-mark.png" width="200" height="200" alt="Logo Miriam Bertin — segno monolinea" onerror="this.src='logo-mark.png'" />
       </div>
       <p class="hero__eyebrow">Graphic Designer <span class="amp">&amp;</span> Art Director</p>
       <h1 id="hero-title" class="hero__title">
@@ -61,7 +64,7 @@
           </p>
         </div>
         <figure class="ideas-strip__figure">
-          <img src="images/portfolio/page-05.png" alt="" loading="lazy" width="800" height="600" />
+          <img src="images/portfolio/page-05.png" alt="" loading="lazy" width="800" height="600" onerror="this.remove()" />
         </figure>
       </div>
     </section>
@@ -169,7 +172,7 @@
   <footer class="site-footer">
     <div class="site-footer__grid">
       <div class="site-footer__brand">
-        <img src="images/logo-mark.png" width="56" height="56" alt="" class="site-footer__logo" />
+        <img src="images/logo-mark.png" width="56" height="56" alt="" class="site-footer__logo" onerror="this.src='logo-mark.png'" />
         <div>
           <span class="site-footer__name">Miriam Bertin</span>
           <p class="site-footer__tag">Graphic Designer &amp; Art Director</p>
@@ -209,6 +212,7 @@
     </div>
   </div>
 
-  <script src="js/main.js" type="module"></script>
+  <!-- Supporta sia struttura /js/main.js che main.js in root -->
+  <script src="js/main.js" type="module" onerror="const s=document.createElement('script');s.type='module';s.src='main.js';document.body.appendChild(s)"></script>
 </body>
 </html>
